@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+:root {
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+    line-height: 1;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    background-color: hsl(219, 19%, 18%);
+    min-height: 100vh;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+main {
+    position: relative;
+    background-color: var(--Dark-Grayish-Blue);
+    margin: 25% 4%;
+    border-radius: 10px;
+    padding: 23px;
+    transition: 0.5s;
+}
+
+h1 {
+    color: var(--Neon-Green);
+    font-size: 11px;
+    text-align: center;
+    letter-spacing: 4px;
+    margin-top: 13px;
+    margin-bottom: 27px;
+}
+
+p {
+    font-size: 24px;
+    text-align: center;
+    line-height: 30px;
+    color: var(--Light-Cyan);
+    margin-bottom: 25px;
+    transition: 0.5s;
+}
+
+.divider {
+    margin-bottom: 40px;
+}
+
+.divider > img {
+    display: block;
+    margin: auto;
+}
+
+button {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    background-color: var(--Neon-Green);
+    border: none;
+    border-radius: 50%;
+    padding: 18px;
+    transition: all 0.5s ease 0s;
+    left: 50%;
+    transform: translate(-50%, -10%);
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 40px -3px var(--Neon-Green);
+}
+
+@media (min-width: 768px) {
+    main {
+        margin: 20%;
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        margin: 16% 28%;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        margin: 13% 32%;
+        padding: 3%;
+    }
+
+    button {
+        transform: translate(-50%, 20%);
+    }
+
+    p {
+        line-height: 37px;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
