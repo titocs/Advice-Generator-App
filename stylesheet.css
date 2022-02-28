@@ -34,6 +34,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
+    position: relative;
     line-height: 1;
     box-sizing: border-box;
     font-family: 'Manrope', sans-serif;
@@ -42,22 +43,55 @@ body {
 }
 
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translate(-50%, -50%);
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid var(--Neon-Green);
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+.show {
+    display: none;
 }
 
 main {
