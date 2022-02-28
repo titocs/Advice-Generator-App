@@ -3,6 +3,8 @@ const adviceQuote = document.querySelector("p");
 const buttonGenerate = document.querySelector("button");
 const url = 'https://api.adviceslip.com/advice';
 const divider = document.querySelector(".divider > img");
+const mainKonten = document.querySelector("main");
+const loader = document.querySelector(".loader");
 
 const mediaQuery = window.matchMedia('(min-width: 1440px)');
 
@@ -17,6 +19,10 @@ function myFunction(x){
 
 myFunction(mediaQuery);
 mediaQuery.addListener(myFunction);
+
+const loading = function(){
+    loader.classList.add("loading");
+}
 
 /* === FETCH API ==== */
 const fetchAPI = ()=> { 
@@ -33,6 +39,8 @@ const fetchAPI = ()=> {
 
 buttonGenerate.addEventListener("click", function(){
     setTimeout(() => {
+        loader.classList.remove("loading");
         fetchAPI();
     }, 500)
+    loading();
 })
